@@ -1,0 +1,62 @@
+[project]
+name = "nnunet_deepspeed_trainer"
+version = "0.1.0"
+requires-python = ">=3.9"
+description = "DeepSpeed trainer for nnU-Net framework for image segmentation."
+readme = "readme.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "drnushooz", email = "drnushooz@users.noreply.github.com"},
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Healthcare Industry",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+
+keywords = [
+    'deep learning',
+    'image segmentation',
+    'semantic segmentation',
+    'medical image analysis',
+    'medical image segmentation',
+    'nnU-Net',
+    'nnunet'
+]
+
+dependencies = [
+    "deepspeed",
+    "nnunetv2",
+    "pyspark>=3.5.0",
+    "transformers",
+    "torch"
+]
+
+[project.urls]
+homepage = "https://github.com/drnushooz/nnunet-deepspeed-trainer"
+repository = "https://github.com/drnushooz/nnunet-deepspeed-trainer"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "mypy",
+    "pre-commit",
+    "ruff",
+    "uv"
+]
+
+[build-system]
+requires = ["setuptools>=67.8.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.codespell]
+skip = '.git,*.pdf,*.svg'
+#
+# ignore-words-list = ''
